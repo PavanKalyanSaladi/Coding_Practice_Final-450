@@ -28,10 +28,20 @@ Table of Content
 
 # 1. Array Reverse Using an Extra Array (Non In-place):
 
-def reverseArray(arr):
+def reverseArray1(arr):
     rev = []
     for i in range(len(arr) - 1, -1, -1):
         rev.append(arr[i])
     return rev
 
-print(reverseArray([4, 5, 1, 2]))
+print(reverseArray1([4, 5, 1, 2]))
+
+
+# 2. Array Reverse Using a Loop (In-place):
+
+def reverseArray2(arr):
+    for i in range(len(arr) // 2):
+        arr[i], arr[len(arr) - i - 1] = arr[len(arr) - i - 1], arr[i]
+    return arr
+
+print(reverseArray2([4, 5, 1, 2]))
