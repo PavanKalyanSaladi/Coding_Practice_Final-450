@@ -45,3 +45,11 @@ def reverseArray2(arr):
     return arr
 
 print(reverseArray2([4, 5, 1, 2]))
+
+
+# 3. Array Reverse Inbuilt Methods (Non In-place):
+
+def reverseArray3(arr):
+    return list(reversed(arr))
+
+print(reverseArray3([4, 5, 1, 2]))
