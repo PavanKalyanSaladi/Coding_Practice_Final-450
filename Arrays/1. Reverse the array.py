@@ -53,3 +53,32 @@ def reverseArray3(arr):
     return list(reversed(arr))
 
 print(reverseArray3([4, 5, 1, 2]))
+
+
+# 4. Array Reverse Recursion (In-place or Non In-place):
+def reverseArray4(arr, start, end):
+    if start >= end:
+        return
+    arr[start], arr[end] = arr[end], arr[start]
+    reverseArray4(arr, start + 1, end - 1)
+
+arr = [4, 5, 1, 2]
+reverseArray4(arr, 0, len(arr) - 1)
+print(arr)
+
+
+# 5. Array Reverse Stack (Non In-place):
+def reverse_array_using_stack(arr):
+    stack = []
+    
+    # Push elements onto the stack
+    for element in arr:
+        stack.append(element)
+    
+    # Pop elements from the stack to reverse the array
+    for i in range(len(arr)):
+        arr[i] = stack.pop()
+
+    return arr
+
+print(reverse_array_using_stack([4, 5, 1, 2]))
