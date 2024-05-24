@@ -36,9 +36,25 @@ Print the result ,Call the setminimum and setmaxi functions to find the minimum 
 
 '''
 
+# 1. Using Sorting
 
 def min_max_element(arr):
     arr = list(sorted(arr))
     return arr[0], arr[len(arr) - 1]
+
+print(min_max_element([3, 5, 4, 1, 9]))
+
+
+# 2. Using Linear Search
+
+def min_max_ele_ls(arr):
+    min = arr[0]
+    max = arr[0]
+    for i in range(2, len(arr) - 1):
+        if arr[i] < min:
+            min = arr[i]
+        elif arr[i] > max:
+            max = arr[i]
+    return min, max
 
 print(min_max_element([3, 5, 4, 1, 9]))
