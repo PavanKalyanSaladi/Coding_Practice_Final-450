@@ -22,6 +22,7 @@ We have discussed three different solutions here.
 '''
 
 
+
 # Appraoch 1
 '''
 K'th smallest element in an unsorted array using Sorting:
@@ -34,7 +35,6 @@ Below is the Implementation of the above approach:
 Time Complexity: O(N log N)
 Auxiliary Space: O(1) 
 '''
-
 def kthLeastElement(arr, k):
     arr.sort()
     return arr[k - 1]
@@ -61,15 +61,13 @@ The Binary Search will end when only one element remains in the answer
 Time complexity: O(n * log (mx-mn)), where mn be minimum and mx be maximum element of array.
 Auxiliary Space: O(1)
 '''
-
 def count(arr, mid):
     cnt = 0
     for i in range(len(arr)):
         if arr[i] <= mid:
             cnt += 1
     return cnt
- 
- 
+
 def kthLeastBinarySearch(arr, k):
     # calculate minimum and maximum the array.
     low = min(arr)
@@ -90,7 +88,68 @@ def kthLeastBinarySearch(arr, k):
 
 arr = [7, 10, 4, 3, 20, 15]
 k = 4
-print("Using Binary Search ", kthLeastElement(arr, k))
+print("Using Binary Search ", kthLeastBinarySearch(arr, k))
+
 
 
 # Approach 3
+'''
+Follow the given steps to solve the problem:
+
+Run quick sort algorithm on the input array
+In this algorithm pick a pivot element and move it to it's correct position
+Now, if index of pivot is equal to K then return the value, else if the index of pivot is greater than K, then recur for the left subarray, else recur for the right subarray 
+Repeat this process until the element at index K is not found
+
+Time Complexity: O(N2) in worst case and O(N) on average. 
+    However if we randomly choose pivots, the probability of worst case could become very less.
+Auxiliary Space: O(N)
+'''
+import sys
+
+def kthSmallestQuickSort(arr, l, r, K):
+ 
+    # If k is smaller than number of
+    # elements in array
+    if (K > 0 and K <= r - l + 1):
+ 
+        # Partition the array around last
+        # element and get position of pivot
+        # element in sorted array
+        pos = partition(arr, l, r)
+ 
+        # If position is same as k
+        if (pos - l == K - 1):
+            return arr[pos]
+        if (pos - l > K - 1):  # If position is more,
+                              # recur for left subarray
+            return kthSmallestQuickSort(arr, l, pos - 1, K)
+ 
+        # Else recur for right subarray
+        return kthSmallestQuickSort(arr, pos + 1, r,
+                           K - pos + l - 1)
+ 
+    # If k is more than number of
+    # elements in array
+    return sys.maxsize
+ 
+# Standard partition process of QuickSort().
+# It considers the last element as pivot and
+# moves all smaller element to left of it
+# and greater elements to right
+ 
+def partition(arr, l, r):
+ 
+    x = arr[r]
+    i = l
+    for j in range(l, r):
+        if (arr[j] <= x):
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+    arr[i], arr[r] = arr[r], arr[i]
+    return i
+
+arr = [7, 10, 4, 3, 20, 15]
+n = len(arr)
+k = 4
+print("Using Quick Sort ", kthSmallestQuickSort(arr, 0, n-1, k))

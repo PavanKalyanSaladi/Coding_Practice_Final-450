@@ -37,7 +37,10 @@ Print the result ,Call the setminimum and setmaxi functions to find the minimum 
 '''
 
 # 1. Using Sorting
-
+'''
+Time complexity: O(n log n), where n is count, as we are using a sorting algorithm.
+Auxilary Space: is O(1), as we are not using any extra space.
+'''
 def min_max_element(arr):
     arr = list(sorted(arr))
     return arr[0], arr[len(arr) - 1]
@@ -45,8 +48,12 @@ def min_max_element(arr):
 print(min_max_element([3, 5, 4, 1, 9]))
 
 
-# 2. Using Linear Search
 
+# 2. Using Linear Search
+'''
+Time Complexity: O(n)
+Auxiliary Space: O(1) as no extra space was needed.
+'''
 def min_max_ele_ls(arr):
     min = arr[0]
     max = arr[0]

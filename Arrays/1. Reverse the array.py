@@ -26,8 +26,14 @@ Table of Content
 
 '''
 
-# 1. Array Reverse Using an Extra Array (Non In-place):
 
+# 1. Array Reverse Using an Extra Array (Non In-place):
+'''
+Time Complexity: O(n)
+    Copying elements to a new array is a linear operation.
+Auxiliary Space Complexity: O(n)
+    Additional space is used to store the new array.
+'''
 def reverseArray1(arr):
     rev = []
     for i in range(len(arr) - 1, -1, -1):
@@ -37,8 +43,14 @@ def reverseArray1(arr):
 print(reverseArray1([4, 5, 1, 2]))
 
 
-# 2. Array Reverse Using a Loop (In-place):
 
+# 2. Array Reverse Using a Loop (In-place):
+'''
+Time Complexity: O(n)
+    The loop runs through half of the array, so it's linear with respect to the array size.
+Auxiliary Space Complexity: O(1)
+    In-place reversal, meaning it doesn't use additional space.
+'''
 def reverseArray2(arr):
     for i in range(len(arr) // 2):
         arr[i], arr[len(arr) - i - 1] = arr[len(arr) - i - 1], arr[i]
@@ -47,15 +59,28 @@ def reverseArray2(arr):
 print(reverseArray2([4, 5, 1, 2]))
 
 
-# 3. Array Reverse Inbuilt Methods (Non In-place):
 
+# 3. Array Reverse Inbuilt Methods (Non In-place):
+'''
+Time Complexity: O(n)
+    The loop runs through half of the array, so it's linear with respect to the array size.
+Auxiliary Space Complexity: O(1)
+    In-place reversal, meaning it doesn't use additional space.
+'''
 def reverseArray3(arr):
     return list(reversed(arr))
 
 print(reverseArray3([4, 5, 1, 2]))
 
 
+
 # 4. Array Reverse Recursion (In-place or Non In-place):
+'''
+Time Complexity: O(n)
+    The loop runs through half of the array, so it's linear with respect to the array size.
+Auxiliary Space Complexity: O(1)
+    In-place reversal, meaning it doesn't use additional space.
+'''
 def reverseArray4(arr, start, end):
     if start >= end:
         return
@@ -67,7 +92,14 @@ reverseArray4(arr, 0, len(arr) - 1)
 print(arr)
 
 
+
 # 5. Array Reverse Stack (Non In-place):
+'''
+Time Complexity: O(n)
+    Pushing and popping each element onto/from the stack requires linear time.
+Auxiliary Space Complexity: O(n)
+    Additional space is used to store the stack.
+'''
 def reverse_array_using_stack(arr):
     stack = []
     
