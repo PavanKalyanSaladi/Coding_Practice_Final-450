@@ -37,6 +37,9 @@ arr[high] to arr[n]
 If the ith element is 0 then swap the element to the low range.
 Similarly, if the element is 1 then keep it as it is.
 If the element is 2 then swap it with an element in high range.
+
+Time Complexity: O(n), Only one traversal of the array is needed.
+Space Complexity: O(1), No extra space is required.
 '''
 def sortNumbers(arr):
     low = 0
@@ -59,3 +62,50 @@ def sortNumbers(arr):
 
 arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
 print(sortNumbers(arr))
+
+
+
+# Approach 2
+'''
+This approach is based on the following idea:
+
+Count the number of 0s, 1s, and 2s in the given array. 
+Then store all the 0s at the beginning followed by all the 1s and then all the 2s.
+
+Time Complexity: O(n), Only nonnested traversals of the array are needed.
+Space Complexity: O(1)
+'''
+def sortNumbers2(arr):
+    cnt0 = 0
+    cnt1 = 0
+    cnt2 = 0
+    for i in arr:
+        if i == 0:
+            cnt0 += 1
+        elif i == 1:
+            cnt1 += 1
+        elif i == 2:
+            cnt2 += 2
+    
+    # Index position
+    pos = 0
+
+    while cnt0 > 0:
+        arr[pos] = 0
+        pos += 1
+        cnt0 -= 1
+    
+    while cnt1 > 0:
+        arr[pos] = 1
+        pos += 1
+        cnt1 -= 1
+    
+    while cnt2 > 0:
+        arr[pos] = 2
+        pos += 1
+        cnt2 -= 1
+    
+    return arr
+
+arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+print(sortNumbers2(arr))
