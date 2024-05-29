@@ -1,0 +1,40 @@
+Data Structure:- It is used to store the data in a structured way.
+
+Algorithm:- Set of rules for a computer to accomplish the task.
+            - Correctness
+            - Efficiency
+
+Why DS & Algo:- Input -> Operation -> Output
+            - Problem Solving skills
+            - Thinking ability in limited time
+
+Types of DS:-
+    1. Primitive:-
+        1. Integer
+        2. Float
+        3. String
+        4. Boolean
+    2. Non Primitive:-
+        1. Linear:-
+            1. List
+            2. Tuple
+            3. Array
+            4. Linked List
+            5. Stack
+            6. Queue
+        2. Non Linear:-
+            1. Set
+            2. Dictionary
+            3. Tree
+            4. Graph
+
+Types of Algorithms:-
+    1. Sorting:- To sort the data in ascending or descending order.
+    2. Search:- TO find a specific value in a data.
+    3. Graph:- To work with data that can be represented as graph.
+    4. Dynamic Programming:- To solve problems by breaking them into sub-problems.
+    5. Divide and Conquer:- To solve problems by breaking them down into smaller sub
+                            problems, solving each sub-problem independently, and 
+                            then combining the results.
+    6. Recursive:- To solve problems by breaking them into smaller sub-problems
+                    that are similar in nature.
