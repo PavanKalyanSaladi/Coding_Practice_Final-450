@@ -1,0 +1,30 @@
+What is Big O?
+    Big O is the language and metric to calculate the efficiency of your algorithm.
+    
+    Time Complexity:-
+    Ex:- code1  -   30sec   (More faster)
+         code2  -   60sec
+    Space Complexity:-
+    Ex:- code1  -   30sec   space(1GB)
+         code2  -   60sec   space(100MB)     (Less Storage)
+
+Big O Notations:-
+    1. Best Case        Ω
+    2. Average Case     θ
+    3. Worst Case       O   (Mostly people Big O)
+
+    Ex: Array   -->     1   2   3   4   5   6   7   8
+        To find one     Ω
+        To find four                θ
+        To find eight                               O
+
+-------------------------------------------------------------------------
+    Complexity  |     Name      |               Sample                  |
+-------------------------------------------------------------------------
+      O(1)      |    Constant   |       A simple add number function    |
+      O(N)      |     Linear    |    Loop through numbers from 1 to N   |
+    O(logN)     |  Logarithmic  |     Find an element in sorted array   |
+     O(N^2)     |   Quadratic   |               Nested Loops            |
+     O(2^N)     |  Exponential  |      Double recursion in Fibonacci    |
+-------------------------------------------------------------------------
+
