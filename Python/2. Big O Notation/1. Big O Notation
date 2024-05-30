@@ -28,3 +28,18 @@ Big O Notations:-
      O(2^N)     |  Exponential  |      Double recursion in Fibonacci    |
 -------------------------------------------------------------------------
 
+-------------------------------------------------------------------------
+|  No   |                   Description                      |Complexity|
+-------------------------------------------------------------------------
+|Rule 1 |  Any assignment statements and if statements that  |   O(1)   |
+|       |   are exceuted regardless of the size of the prob  |          |
+-------------------------------------------------------------------------
+|Rule 2 | A simple "for" loop from 0 to n (no internal loop) |   O(N)   |
+-------------------------------------------------------------------------
+|Rule 3 |   A nested loop of the same type takes quadratic   |  O(N^2)  |
+-------------------------------------------------------------------------
+|Rule 4 |    A loop in which the controlling parameter is    |  O(logN) |
+|       |           divided by two at each step              |          |
+-------------------------------------------------------------------------
+|Rule 5 |   When dealing with multiple statements, just add them up     |
+-------------------------------------------------------------------------
