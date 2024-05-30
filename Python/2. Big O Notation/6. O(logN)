@@ -1,0 +1,76 @@
+Example:-
+
+Find the element in an array using Divide and conquer.
+
+Arr = [1, 2, 3, 4, 5, 6, 7, 8]
+f = 1
+
+Step1:-
+    Divide the array into two parts
+    [1, 2, 3, 4]    [5, 6, 7, 8]
+Step2:- The elemnet is in the array-1, so neglect array-2
+    [1, 2, 3, 4]
+Step3:- Divide the array into two parts
+    [1, 2]      [3, 4]
+    Repeat the same until you find the value
+Step4:-
+    [1]     [2]
+
+------------------------------------------------------------------------------
+
+Example 2:-
+Finding the card in deck of cards
+
+Spade   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+Heart   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+Qalar   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+Diamond - A   2   3   4   5   6   7   8   9   10  J   Q   K
+
+let's assume find 10 Heart in this deck.
+
+Step1:- 
+    Divide the deck into two parts
+    1.  Spade   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+        Heart   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+    2.  Qalar   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+        Diamond - A   2   3   4   5   6   7   8   9   10  J   Q   K
+
+Step2:- 10 Heart is in the first, so neglect second part.
+        Repeat the same until you find the card
+        Spade   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+        Heart   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+
+Step3:- 
+    1.  Spade   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+    2.  Heart   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+
+Step4:- 
+    Heart   - A   2   3   4   5   6   7   8   9   10  J   Q   K
+
+Step5:-
+    1.  Heart   - A   2   3   4   5   6
+    2.  Heart   - 7   8   9   10  J   Q   K
+
+Step6:-
+    Heart   - 7   8   9   10  J   Q   K
+
+Step7:-
+    1. Heart   -   7   8   9
+    2. Heart   -   10  J   Q   K
+
+Step8:-
+    Heart   -   10  J   Q   K
+
+Step9:-
+    1. Heart - 10  J
+    2. Heart - Q   K
+
+Step10:-
+    Heart - 10 J
+
+Step11:-
+    1. Heart - 10
+    2. Heart - J
+
+Step 12:-
+    Heart - 10      Found the value
