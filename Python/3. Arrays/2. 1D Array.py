@@ -8,3 +8,7 @@ print(my_array1)
 
 # numpy module  - Installation needs to be done before running
 import numpy as np
+np_array = np.array([],dtype=int)    # int type of empty array
+print(np_array)
+np_array1 = np.array([1, 2, 3, 4])
+print(np_array1)
