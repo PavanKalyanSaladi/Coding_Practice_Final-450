@@ -18,5 +18,5 @@ print(np_array1)
 # Using array module
 my_array1 = array.array('i', [1, 2, 3, 4])
 print(my_array1)
-my_array1.insert(0, 6)
+my_array1.insert(2, 6)
 print(my_array1)
