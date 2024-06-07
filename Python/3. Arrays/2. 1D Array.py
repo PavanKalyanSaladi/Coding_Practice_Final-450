@@ -6,11 +6,11 @@ my_array1 = array.array('i', [1, 2, 3, 4])  # Only same type of elements can be 
 print(my_array1)
 
 # numpy module  - Installation needs to be done before running
-# import numpy as np
-# np_array = np.array([],dtype=int)    # int type of empty array
-# print(np_array)
-# np_array1 = np.array([1, 2, 3, 4])
-# print(np_array1)
+import numpy as np
+np_array = np.array([],dtype=int)    # int type of empty array
+print(np_array)
+np_array1 = np.array([1, 2, 3, 4])
+print(np_array1)
 
 
 # INSERTION INTO ARRAY - Using array module
@@ -29,3 +29,13 @@ def traverArray(arr):
         print(i)
 traverArray(arr1)
 traverArray(arr2)
+
+
+# Accessing an element
+from array import *
+arr1 = array('i', [1, 2, 3, 4, 5, 6])
+def accessElement(arr, index):
+    if index < len(arr):
+        return -1
+    return arr[index]
+accessElement(arr1, 4)
