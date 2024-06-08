@@ -40,7 +40,7 @@ def accessElement(arr, index):
     if index < len(arr):
         return -1
     return arr[index]
-accessElement(arr1, 4)
+print(accessElement(arr1, 4))
 
 
 # Searching an element
@@ -49,6 +49,13 @@ arr1 = array('i', [1, 2, 3, 4, 5, 6])
 def searchElement(arr, value):
     for i in range(len(arr)):
         if arr[i] == value:
-            return arr[i]
+            return i
     return -1
-searchElement(arr1, 4)
+print(searchElement(arr1, 4))
+
+
+# Deleting an element
+from array import *
+arr1 = array('i', [1, 2, 3, 4, 5, 6])
+arr1.remove(4)
+print("Deleted Element: 4 ", arr1)
