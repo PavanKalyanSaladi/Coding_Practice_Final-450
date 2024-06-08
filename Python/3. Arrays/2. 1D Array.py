@@ -20,6 +20,8 @@ my_array1.insert(2, 6)
 print(my_array1)
 
 
+
+
 # TRAVERSAL OF AN ARRAY
 from array import *
 arr1 = array('i', [1, 2, 3, 4, 5])
@@ -39,3 +41,14 @@ def accessElement(arr, index):
         return -1
     return arr[index]
 accessElement(arr1, 4)
+
+
+# Searching an element
+from array import *
+arr1 = array('i', [1, 2, 3, 4, 5, 6])
+def searchElement(arr, value):
+    for i in range(len(arr)):
+        if arr[i] == value:
+            return arr[i]
+    return -1
+searchElement(arr1, 4)
