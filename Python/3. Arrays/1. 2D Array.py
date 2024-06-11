@@ -30,3 +30,14 @@ def traversal2DArray(array, rowLen, colLen):
         print()
 
 traversal2DArray(twoDArray, 4, 4)
+
+
+# Searching an element in 2D array
+def search2DArray(array, value):
+    for i in range(len(array)):
+        for j in range(len(array)):
+            if array[i][j] == value:
+                return "Value is at index: " + str(i) + " " + str(j)
+    return "Not Found."
+
+print(search2DArray(twoDArray, 5))
