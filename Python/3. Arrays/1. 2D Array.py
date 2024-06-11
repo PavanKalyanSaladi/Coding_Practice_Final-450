@@ -10,3 +10,13 @@ print(newTwoDArray)
 
 newTwoDArray = np.append(twoDArray, [[1, 2, 3, 4]], axis=0)      # 0-Row, 1-Column
 print(newTwoDArray)
+
+
+# Accessing an element of 2D Array
+def accessElements(array, rowIndex, colIndex):
+    if rowIndex >= len(array) and colIndex >= len(array):
+        print("Incorrect Index")
+    else:
+        print(array[rowIndex][colIndex])
+
+accessElements(twoDArray, 1, 2)
