@@ -20,3 +20,13 @@ def accessElements(array, rowIndex, colIndex):
         print(array[rowIndex][colIndex])
 
 accessElements(twoDArray, 1, 2)
+
+
+# Traversal of 2D array
+def traversal2DArray(array, rowLen, colLen):
+    for i in range(colLen):
+        for j in range(rowLen):
+            print(array[i][j], end=" ")
+        print()
+
+traversal2DArray(twoDArray, 4, 4)
