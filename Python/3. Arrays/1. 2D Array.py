@@ -41,3 +41,9 @@ def search2DArray(array, value):
     return "Not Found."
 
 print(search2DArray(twoDArray, 5))
+
+
+# Deletion of col / row in 2D array
+newTwoDArray = np.delete(twoDArray, 0, axis=1)
+print(twoDArray)
+print(newTwoDArray)
