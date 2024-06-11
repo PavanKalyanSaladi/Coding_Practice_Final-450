@@ -1,0 +1,9 @@
+Operation                            Time            Space
+------------------------------------------------------------
+Creation of an empty array           O(1)             O(1)
+Creating an array with elements      O(mn)            O(mn)
+Inserting a column/row in array      O(mn)            O(mn)
+Traversing a given array             O(mn)            O(1)
+Accesing a given cell                O(1)             O(1)
+Searching a given value              O(mn)            O(1)
+Deleting a column/row                O(mn)            O(mn)
