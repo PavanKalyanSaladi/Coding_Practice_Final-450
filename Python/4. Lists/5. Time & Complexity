@@ -1,0 +1,9 @@
+Operation                           Time        Space
+------------------------------------------------------
+Creating an empty list              O(1)        O(1)
+Creating a list with elements       O(n)        O(n)
+Inserting a value in a list         O(n)        O(1)
+Traversing a list                   O(n)        O(1)
+Accessing a given cell in list      O(1)        O(1)
+Searching a given value in list     O(n)        O(1)
+Deleting a value from list          O(1)        O(1)
