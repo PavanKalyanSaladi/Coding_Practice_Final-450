@@ -4,6 +4,10 @@ List starts and ends with [ ]
 List elements doesn't need to have same type
 List of lists are allowed - ['spam', 1.0, [10, 20]]
 List indexing starts with 0 to N-1      N = Number of elements
+List methods:-
+ - insert()
+ - append()
+ - extend()
 '''
 
 # Cretation of list
@@ -23,6 +27,7 @@ empty = []          # empty list prints - []
 print(empty)
 
 
+
 # Acessing / Traversing a List
 print(shoppingList[1])
 print(shoppingList[-1])                 # -1 indexing starts from back -> -3 -2 -1
@@ -35,3 +40,19 @@ for i in range(len(nestedList)):        # Iterate using index of list
     print(nestedList[i], end=" ")
 print()
 print([item for item in integers])      # Single line iteration
+
+
+
+# Update / Insert into list
+myList = [1, 2, 3, 4, 5, 6, 7]
+print(myList)
+myList[2] = 33
+myList[4] = 55
+print(myList)
+
+myList.insert(0, 11)
+print(myList)
+myList.append(10)
+print(myList)
+myList.extend([11, 12, 13])
+print(myList)
