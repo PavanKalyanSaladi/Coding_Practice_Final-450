@@ -4,10 +4,14 @@ List starts and ends with [ ]
 List elements doesn't need to have same type
 List of lists are allowed - ['spam', 1.0, [10, 20]]
 List indexing starts with 0 to N-1      N = Number of elements
-List methods:-
+List methods for insertion:-
  - insert()
  - append()
  - extend()
+List methods for deletion():-
+ - pop()
+ - delete()
+ - remove()
 '''
 
 # Cretation of list
@@ -55,4 +59,22 @@ print(myList)
 myList.append(10)
 print(myList)
 myList.extend([11, 12, 13])
+print(myList)
+
+
+
+# Slice / Delete from list
+myList = ['a', 'b', 'c', 'd', 'e', 'f']
+print(myList[0:2])                          # prints 0 to 2 index values, excluding 2
+print(myList[:2])                           # prints 0 to 2 index values, excluding 2
+print(myList[1:])                           # prints 1 to n-1, n is number of elements
+print(myList[:])                            # prints entire list
+print(myList[-1:])                          # prints -1 index element
+myList.pop()                                # pops last element, you can pass index as well
+print(myList)
+del myList[1]                               # deletes the element of given index
+print(myList)
+del myList[4:]                              # deletes the element from 4 to N-1
+print(myList)
+myList.remove('e')                          # Removes the given value if exists
 print(myList)
