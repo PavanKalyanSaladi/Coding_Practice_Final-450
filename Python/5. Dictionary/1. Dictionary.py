@@ -32,3 +32,11 @@ my_dict['age'] = 22
 print(my_dict)
 my_dict['address'] = 'Hyderabad'
 print(my_dict)
+
+
+# Traversing a dictionary
+def traverseDict(my_dict):
+    for key in my_dict:
+        print(key, my_dict[key])
+
+traverseDict(my_dict)
