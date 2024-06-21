@@ -40,3 +40,13 @@ def traverseDict(my_dict):
         print(key, my_dict[key])
 
 traverseDict(my_dict)
+
+
+# Deletion of element in Dictionary
+my_dict = {'name': 'Pavan', 'age': 23, 'address': 'hyderabad', 'education': 'master'}
+
+del my_dict['address']      # deletes the given key
+my_dict.pop('age')          # pops the given key
+my_dict.popitem()           # pops out the last item
+my_dict.clear()             # clears the entire dictionary
+print(my_dict)
