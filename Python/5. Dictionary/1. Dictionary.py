@@ -23,3 +23,12 @@ print(eng_sp2)
 eng_sp_list = [('one', 'uno'), ('two', 'dos'), ('three', 'tres')]
 eng_sp3 = dict(eng_sp_list)
 print(eng_sp3)
+
+
+# Insert / Update an element
+my_dict = {'name': 'Pavan', 'age': 23}
+#print(my_dict)
+my_dict['age'] = 22
+print(my_dict)
+my_dict['address'] = 'Hyderabad'
+print(my_dict)
