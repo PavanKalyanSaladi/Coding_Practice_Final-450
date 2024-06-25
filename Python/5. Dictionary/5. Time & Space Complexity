@@ -1,0 +1,8 @@
+Operation                           Time        Space
+------------------------------------------------------
+Creating an Dictionary          O(len(Dict))    O(n)
+Inserting a value into Dict       O(1)/O(n)     O(1)
+Traversing a Dictionary             O(n)        O(1)
+Accessing a given cell in Dict      O(1)        O(1)
+Searching a given value in Dict     O(n)        O(1)
+Deleting a value from Dict          O(1)        O(1)
