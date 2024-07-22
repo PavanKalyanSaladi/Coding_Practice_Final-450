@@ -37,23 +37,44 @@ Constraints:
 0 <= nums[i] <= 100
 '''
 
+# def nextPermutation(nums):
+#     """
+#     Do not return anything, modify nums in-place instead.
+#     """
+#     # dump = nums.copy()
+#     current_pos = len(nums) - 1
+#     if len(nums) > 1 and sorted(nums, reverse=True) != nums:
+#         for i in range(len(nums) - 2, -1, -1):
+#             nums[current_pos], nums[i] = nums[i], nums[current_pos]
+#             if nums[current_pos] < nums[i]:
+#                 break
+#             else:
+#                 current_pos -= 1
+#                 continue
+#     else:
+#         nums.sort()
+
+def swap(nums, i):
+    index = i
+    for j in range(i + 1,len(nums)):
+        if nums[j] > nums[i - 1] and nums[j] < nums[index]:
+            index = j
+    nums[i - 1], nums[index] = nums[index], nums[i - 1]
+    nums[i:] = sorted(nums[i:])
+
 def nextPermutation(nums):
-    """
-    Do not return anything, modify nums in-place instead.
-    """
-    # dump = nums.copy()
-    current_pos = len(nums) - 1
     if len(nums) > 1 and sorted(nums, reverse=True) != nums:
-        for i in range(len(nums) - 2, -1, -1):
-            nums[current_pos], nums[i] = nums[i], nums[current_pos]
-            if nums[current_pos] < nums[i]:
+        for i in range(len(nums) - 1, -1, -1):
+            if nums[i - 1] < nums[i]:
+                swap(nums, i)
                 break
-            else:
-                current_pos -= 1
-                continue
     else:
         nums.sort()
 
-nums = [3, 2, 1]
+nums = [4, 5, 9, 7]
+nextPermutation(nums)
+print(nums)
+
+nums = [2, 1, 5, 4, 3, 0, 0]
 nextPermutation(nums)
 print(nums)
